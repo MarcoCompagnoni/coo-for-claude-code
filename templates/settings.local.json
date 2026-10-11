@@ -1,0 +1,20 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"/path/to/coo-for-claude-code/hooks/report_to_coo.py\"",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "python \"/path/to/coo-for-claude-code/hooks/keep_working.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

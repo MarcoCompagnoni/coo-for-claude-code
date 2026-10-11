@@ -1,0 +1,13 @@
+{
+  "coo_session_id": "local_00000000-0000-0000-0000-000000000000",
+  "coo_names": ["COO"],
+  "ceo_name": "CEO",
+  "board": "coo/BOARD.md",
+  "desk": "coo/CEO_DESK.md",
+  "transcripts_dir": "~/.claude/projects/C--path-to-your-coo-folder",
+  "report_threshold_chars": 300,
+  "queue_section": "## Autonomous queue",
+  "queue_waiting_mark": "[waiting]",
+  "queue_max_runs_without_commit": 3,
+  "queue_reset_minutes": 30
+}

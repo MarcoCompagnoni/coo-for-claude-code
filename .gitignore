@@ -1,0 +1,13 @@
+# Your real configuration holds session ids and local paths
+coo.config.json
+
+# Runtime state written by the hooks
+.claude/queue_state.json
+.claude/queue_paused
+
+# Output of method_metrics.py --dump: your own messages
+ceo_answers.csv
+
+__pycache__/
+.pytest_cache/
+*.pyc
