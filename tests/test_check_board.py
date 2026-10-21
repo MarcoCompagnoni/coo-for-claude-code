@@ -22,11 +22,11 @@ Shop (82%, `/clear`: TODO up to date, nothing in flight).
 
 ## Decide
 
-- `TR1` **Invoicing · A or B?** Recommend A. If no answer: nothing happens (31/10). http://localhost:8000/tr1.html. Write `TR1 A` or `TR1 B`.
+- `TR1` **Invoicing · A or B?** Red: money. Recommend A. If no answer: nothing happens (31/10). http://localhost:8000/tr1.html. Write `TR1 A` or `TR1 B`.
 
 ## Do
 
-- `MR1` **Marketing · 2 min · grant access to the hosting account.** Unblocks the invoice. `MR1 done`.
+- `MR1` **Marketing · 2 min · grant access to the hosting account.** Red: accounts. Unblocks the invoice. `MR1 done`.
 
 ## Decided by COO
 
@@ -64,6 +64,12 @@ def test_well_formed_desk_passes() -> None:
 def test_missing_section() -> None:
     desk = DESK_OK.replace("## Do\n", "## Other\n")
     assert any("section «do» is missing" in d for d in desk_defects(desk, TODAY))
+
+
+def test_an_item_for_the_ceo_without_a_red_reason_is_a_defect() -> None:
+    for old, new in (("Red: money. ", ""), ("Red: accounts. ", ""), ("Red: money.", "Red: convenience.")):
+        found = desk_defects(DESK_OK.replace(old, new), TODAY)
+        assert any("it is yellow" in d for d in found), old
 
 
 def test_red_item_without_if_no_answer() -> None:

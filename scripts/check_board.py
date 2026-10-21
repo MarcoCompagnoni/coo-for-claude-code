@@ -43,6 +43,9 @@ MINUTES = re.compile(r"\b\d+ ?(?:min|minutes|h|hours?)\b")
 LINK = re.compile(r"https?://\S+")
 DONE = re.compile(r"^\s+- \*{0,2}Done", re.M)
 PERCENT = re.compile(r"\d{1,3} ?%")
+# An item reaches the CEO only for one of these reasons; any other is yellow and the COO decides it.
+RED_REASONS = ("money", "accounts", "outside messages", "production", "goal and plan", "own project", "own task", "answer")
+RED_REASON = re.compile(r"red: [^.]*?\b(?:" + "|".join(RED_REASONS) + r")\b", re.I)
 
 
 def load_config() -> dict[str, Any]:
@@ -221,6 +224,11 @@ def desk_defects(desk: str, today: date | None = None) -> list[str]:
             code = match.group(1)
             if DONE.search(item):
                 found.append(f"desk «{name}» {code}: «Done» inside the item, it belongs in the board or the TODO")
+            if name in ("decide", "do") and not RED_REASON.search(item):
+                found.append(
+                    f"desk «{name}» {code}: «Red: …» with one reason is missing ({', '.join(RED_REASONS)}); "
+                    "without one it is yellow"
+                )
             if name == "decide":
                 if code[1] != "R":
                     found.append(f"desk «Decide» {code}: a red item has an R code")

@@ -39,7 +39,9 @@ The CEO reads the desk, not the board and not this chat. By action and by weight
 sections in this order:
 
 1. **Decide** — only red items. First the ones that stop a session, then deadlines, then the week's priorities.
-   Each item: the question in one line, «Recommend …» with the one number that matters, «If no answer: …» with
+   Each item names why it is the CEO's, «Red: …» with one of money, accounts, outside messages, production,
+   goal and plan, own project, own task, answer; an item that cannot is yellow and the COO decides it.
+   Then the question in one line, «Recommend …» with the one number that matters, «If no answer: …» with
    the date, the link to a page. Under 600 characters.
 2. **Do** — the CEO's manual actions, with the minutes and what they unblock. **One item is one self-contained
    unit of work**, never «do, wait, then do»: when the wait is over, the next item is written from scratch.

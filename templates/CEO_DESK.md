@@ -8,12 +8,12 @@ Research (78%, `/clear`: TODO up to date, nothing in flight).
 
 ## Decide
 
-- `RR1` **Research · pay a monthly fee for the listings data source or keep scraping?** Recommend paying for three months: the scraper broke twice in September and cost two days each time. If no answer: the scan keeps running on the scraper (18/10). http://127.0.0.1:8000/research_data_source.html. Write `RR1 pay` or `RR1 scrape`.
+- `RR1` **Research · pay a monthly fee for the listings data source or keep scraping?** Red: money. Recommend paying for three months: the scraper broke twice in September and cost two days each time. If no answer: the scan keeps running on the scraper (18/10). http://127.0.0.1:8000/research_data_source.html. Write `RR1 pay` or `RR1 scrape`.
 
 ## Do
 
-- `SR1` **Shop · 5 min · approve the three product pages.** Unblocks the publication; the drafts and the photos are on the page. http://127.0.0.1:8000/shop_pages.html. `SR1 done`.
-- `PR1` **Property · 15:00 today · 10 min · call the agent about the second listing.** The valuation is ready; the question to ask is on the page. http://127.0.0.1:8000/property_call.html. `PR1 done`.
+- `SR1` **Shop · 5 min · approve the three product pages.** Red: outside messages. Unblocks the publication; the drafts and the photos are on the page. http://127.0.0.1:8000/shop_pages.html. `SR1 done`.
+- `PR1` **Property · 15:00 today · 10 min · call the agent about the second listing.** Red: own task. The valuation is ready; the question to ask is on the page. http://127.0.0.1:8000/property_call.html. `PR1 done`.
 
 ## Decided by COO
 
